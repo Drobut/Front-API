@@ -35,7 +35,7 @@ function enableButtonLogin() {
     }
 }
 navigatorHome.onclick = function () {
-    window.location.href = "home-page.html";
+    window.location.href = "index.html";
 };
 signIpButton.onclick = function () {
     var data = {
@@ -72,7 +72,7 @@ function messageAlertLogin() {
             '<div class="registerAlertInner" id="registerAlertInner">' +
                 '<div class="alert alert-danger mt-1 mb-4" role="alert">' +
                 "Email or password is invalid " +
-                '<a href="home-page.html" class="alert-link"' +
+                '<a href="index.html" class="alert-link"' +
                 ">click here to sign up</a>.";
         registerAlertLogin === null || registerAlertLogin === void 0 ? void 0 : registerAlertLogin.append(registerAlerts);
         registerAlertLogin.classList.toggle("fadeOut");
