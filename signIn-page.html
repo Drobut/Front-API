@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/dark-logo.svg" />
+    <link rel="icon" type="image/x-icon" href="/images/normal-logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="default.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="d-flex align-items-center center-adjustment">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="col-6 bg-light text-white rounded-start d-flex flex-column align-items-center justify-content-center"
+          >
+            <h4 class="text-center text-primary mt-5 mb-4">Sign in!</h4>
+            <div class="d-flex justify-content-center mb-4">
+              <img id="meta" src="/images/meta.svg" />
+              <img id="google" src="/images/google.svg" />
+              <img id="linkedin" src="/images/linkedin.svg" />
+            </div>
+            <h7 id="useYourEmail" class="d-flex justify-content-center mb-3"
+              >Sign in with your social account</h7
+            >
+            <div class="input-group input-group-lg flex-nowrap mb-3 w-75">
+              <span class="input-group-text" id="basic-addon1"
+                ><img src="/images/envelope.svg"
+              /></span>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Email"
+                aria-label="Email"
+                aria-describedby="addon-wrapping"
+                tabindex="0"
+                data-bs-toggle="popover"
+                data-bs-trigger=" focus"
+                data-bs-content="Example@example.com"
+              />
+            </div>
+            <div class="input-group input-group-lg flex-nowrap w-75">
+              <span class="input-group-text" id="addon-wrapping"
+                ><img src="/images/key.svg"
+              /></span>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Password"
+                aria-label="Password"
+                aria-describedby="addon-wrapping"
+                tabindex="0"
+                data-bs-toggle="popover"
+                data-bs-trigger="focus"
+                data-bs-content="Minimum eight characters, at least one letter and one number."
+              />
+            </div>
+            <p id="useYourEmail" class="d-flex justify-content-end mt-3">
+              Forgot your password?
+            </p>
+            <div id="registerAlert"></div>
+              <button
+                class="btn btn-primary mb-5 mt-3"
+                id="signIpButton"
+                style="width: 150px"
+                type="button"
+                disabled
+
+              >
+                SIGN IN
+          </butto>
+          </div> 
+
+          <div
+            class="col-3 bg-primary text-white rounded-end d-flex flex-column align-items-center justify-content-center"
+          >
+            <h4 class="text-center mt-5 mb-4">Create Account</h4>
+            <h7 class="text-center mt-4"
+              >If you don't have an account yet, please click the button below
+              to register.</h7
+            >
+            <button
+              type="button"
+              style="width: 150px"
+              class="btn btn-outline-light mt-5"
+              id="navigatorHome"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/signIn-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      var exports = {};
+    </script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+      );
+      const popover = new bootstrap.Popover('.popover-dismiss', {
+        trigger: 'focus',
+      });
+    </script>
+  </body>
+</html>
